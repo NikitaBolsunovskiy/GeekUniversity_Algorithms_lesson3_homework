@@ -3,6 +3,7 @@
 #define MaxN 100
 
 void solution1();
+void solution2();
 
 void print(int N, int*a){
     int i;
@@ -89,7 +90,8 @@ int shakerSort(int N, int *a){
 
 int main (int argc, char* argv[]){
 
-    solution1();
+    //solution1();
+    solution2();
 
     return 0;
 }
@@ -117,6 +119,22 @@ void solution1(){
     puts("Массив до сортировки:");
     print(N,a);
     counter = shakerSort(N,a);
+    puts("Массив после сортировки:");
+    print(N,a);
+    printf("Количество операций: %d\n",counter);
+}
+
+void solution2(){
+
+//    2. *Реализовать шейкерную сортировку.
+
+    int a[MaxN];
+    int N;
+
+    readArrayFromTxtFile(&N,a,"D:\\Java_projects_Study\\05_Algorithms_and_data_structures\\03\\homework3\\testData.txt");
+    puts("Массив до сортировки:");
+    print(N,a);
+    int counter = shakerSort(N,a);
     puts("Массив после сортировки:");
     print(N,a);
     printf("Количество операций: %d\n",counter);
