@@ -5,6 +5,7 @@
 void solution1();
 void solution2();
 void solution3();
+void solution4();
 
 void print(int N, int*a){
     int i;
@@ -93,7 +94,8 @@ int main (int argc, char* argv[]){
 
     //solution1();
     //solution2();
-    solution3();
+    //solution3();
+    solution4();
 
     return 0;
 }
@@ -184,4 +186,10 @@ void solution3(){
 
     printf("позиция искомого числа: %d\n",searchSortedArray(x,N,a));
 
+}
+
+void solution4() {
+//    4. *Подсчитать количество операций для каждой из сортировок и сравнить его с асимптотической
+//    сложностью алгоритма.
+    //Пока не очень понятно что нужно сделать...
 }
