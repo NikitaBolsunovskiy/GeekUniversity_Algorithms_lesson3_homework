@@ -4,6 +4,7 @@
 
 void solution1();
 void solution2();
+void solution3();
 
 void print(int N, int*a){
     int i;
@@ -91,7 +92,8 @@ int shakerSort(int N, int *a){
 int main (int argc, char* argv[]){
 
     //solution1();
-    solution2();
+    //solution2();
+    solution3();
 
     return 0;
 }
@@ -138,4 +140,48 @@ void solution2(){
     puts("Массив после сортировки:");
     print(N,a);
     printf("Количество операций: %d\n",counter);
+}
+
+int searchSortedArray(int x, int N, int *a){
+
+    int L = 0;
+    int R = N-1;
+    int m = L+(R-L)/2;
+    while(L<=R && a[m]!= x){
+        if(a[m]<x){
+            L=m+1;
+        } else {
+            R=m-1;
+        }
+        m = L + (R-L)/2;
+    }
+
+    if (a[m]==x){
+        return m;
+    } else {
+        return -1;
+    }
+
+}
+
+void solution3(){
+
+//    3. Реализовать бинарный алгоритм поиска в виде функции, которой передается отсортированный
+//    массив. Функция возвращает индекс найденного элемента или -1, если элемент не найден.
+
+    int a[MaxN];
+    int N;
+
+    int x;
+
+    readArrayFromTxtFile(&N,a,"D:\\Java_projects_Study\\05_Algorithms_and_data_structures\\03\\homework3\\testData.txt");
+    shakerSort(N,a);
+    puts("Массив отсортированный:");
+    print(N,a);
+
+    printf("Введите число для поиска:\n");
+    scanf("%d",&x);
+
+    printf("позиция искомого числа: %d\n",searchSortedArray(x,N,a));
+
 }
