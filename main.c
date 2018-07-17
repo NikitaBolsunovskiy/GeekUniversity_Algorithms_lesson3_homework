@@ -7,6 +7,16 @@ void solution2();
 void solution3();
 void solution4();
 
+int main (int argc, char* argv[]){
+
+    //solution1();
+    //solution2();
+    //solution3();
+    solution4();
+
+    return 0;
+}
+
 void print(int N, int*a){
     int i;
     for (i=0; i<N; i++)
@@ -88,16 +98,6 @@ int shakerSort(int N, int *a){
     }
 
     return counter;
-}
-
-int main (int argc, char* argv[]){
-
-    //solution1();
-    //solution2();
-    //solution3();
-    solution4();
-
-    return 0;
 }
 
 void solution1(){
