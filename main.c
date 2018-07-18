@@ -50,12 +50,11 @@ int bubleSort(int N, int *a){
     int counter = 0;
 
     for(int i = 0; i<N;i++){
-        counter += 1;
         for (int j = 0; j < N-1; ++j) {
-            counter += 1;
+            counter++;
             if (a[j]>a[j+1]){
                 swap(&a[j],&a[j+1]);
-                counter+=1;
+                counter++;
             }
         }
     }
@@ -74,13 +73,12 @@ int shakerSort(int N, int *a){
 
 
     for(int i = 0; i<N;i++){
-        counter += 1;
         if(i%2==0){
             for (int j = min; j < max; j++) {
-                counter+=1;
+                counter++;
                 if(a[j]>a[j+1]){
                     swap(&a[j],&a[j+1]);
-                    counter+=1;
+                    counter++;
                 }
             }
             max -= 1;
@@ -89,7 +87,7 @@ int shakerSort(int N, int *a){
                 counter+=1;
                 if(a[j]<a[j-1]){
                     swap(&a[j],&a[j-1]);
-                    counter+=1;
+                    counter++;
                 }
             }
             min+=1;
@@ -188,9 +186,12 @@ void solution3(){
 
 }
 
+
 void solution4() {
 //    4. *Подсчитать количество операций для каждой из сортировок и сравнить его с асимптотической
 //    сложностью алгоритма.
-    //Пока не очень понятно что нужно сделать...
     // нашел неплохую статью о сортировках массивов с примерами реализации и тестами... https://habr.com/post/335920/
+
+    // В solution1() выводится сравнение для пузырьковой и шейкерной сортировки.
+
 }
